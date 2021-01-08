@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Button = ({
-    task, ...props
+    task, doneTask, deleteTask
 }) => {
     return (
-        <div className = "button">
-            {task.done ? <p>✔</p> : <p>no</p>}
+        <div className = "action-btn">
+            {!task.done ? <p onClick = {doneTask}>+</p> : <p onClick = {deleteTask}>-</p>}
         </div>
     )
 }
