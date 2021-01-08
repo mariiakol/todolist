@@ -60,7 +60,15 @@ code {
   padding: 5px;
   font-size: 18px;
   font-weight: 500;
-  color: var(--text);
+  color:  #104486;
+  -webkit-text-fill-color: #104486;
+}
+
+input {
+  -webkit-user-select: text; 
+  -moz-user-select: text; 
+  -ms-user-select: text; 
+  user-select: text;
 }
 
 .task-input button {
@@ -71,6 +79,12 @@ code {
   color: #ffffff;
   cursor: pointer;
   margin-left: 10px;
+  font-weight: 700;
+}
+.task-input button:hover{
+  background-color: #48769e;
+  opacity: 0.7;
+  color: white;
 }
 
 .task {

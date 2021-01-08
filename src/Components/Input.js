@@ -38,7 +38,8 @@ class Input extends Component {
             <input 
                 onKeyPress = {this.handleEnter} 
                 onChange = {this.inputChange} 
-                value = {input}>
+                value = {input}
+                type = "text">
             </input>
             <button onClick = {this.addTask}>ADD</button>
         </div>
