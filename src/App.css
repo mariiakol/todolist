@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
 body {
   margin: 0;
   font-family: 'Roboto';
@@ -10,7 +10,7 @@ body {
   margin-top: -108.5px;
   left: 50%;
   margin-left: -250px;
-  background-color:#48769e;
+  background-color:#dcffaf;
 }
 
 code {
@@ -31,7 +31,7 @@ code {
 }
 
 .top {
-  background: #bee1f9;
+  background: #f8bdff;
   color: #ffffff;
   padding: 10px;
   font-size: 28px;
@@ -44,7 +44,7 @@ code {
 
 .task-input {
   margin-top: 10px;
-  background-color: #bee1f9;
+  background-color: #f8bdff;
   display: flex;
   padding: 5px;
   outline: none;
@@ -60,8 +60,10 @@ code {
   padding: 5px;
   font-size: 18px;
   font-weight: 500;
-  color:  #104486;
-  -webkit-text-fill-color: #104486;
+  color:  #b5009e;
+  -webkit-text-fill-color: #b5009e;
+  outline: none;
+  font-weight: 500;
 }
 
 input {
@@ -82,7 +84,7 @@ input {
   font-weight: 700;
 }
 .task-input button:hover{
-  background-color: #48769e;
+  background-color: #b87bb9;
   opacity: 0.7;
   color: white;
 }
@@ -98,21 +100,21 @@ input {
 }
 
 .task:hover {
-  background-color: #04395e3d;
+  background-color: #da22cc27;
 }
 
 .task p {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
-  color: #104486;
+  color: #b5009e;
 }
 
 .task-done {
-  background-color: #9acaf327;
+  background-color:#da22cc27;
 }
 .task-done  p {
-  color: #104486;
+  color: #b5009e;
 }
 
 .action-btn {
