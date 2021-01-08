@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react"
+import Task from '../src/Components/Task'
 
-function App() {
+class App extends Component {
+  constructor () {
+    super();
+
+    this.state = {
+      tasks: [
+        { id: 0, title: "Send CV", done: false },
+        { id: 0, title: "Create app", done: true },
+        { id: 0, title: "Have a great time", done: true },
+      ]
+    }
+  }
+render() {
+  const {tasks} = this.state; //реструктуризация ЕС6
+  const activeTasks = tasks.filter(task => !task.done)
+  const doneTasks = tasks.filter (task => task.done)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "app">
+      <h1 className = "top">Active tasks: {activeTasks.length}</h1>
+      {
+        [...activeTasks, ...doneTasks].map(task => (
+          <Task task = {task} key = {task.id}></Task>
+        ))
+      }
     </div>
-  );
+  )
+}
+
 }
 
 export default App;
