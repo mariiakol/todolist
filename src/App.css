@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+	top: 50%;
+	height: 217px;
+  margin-top: -108.5px;
+  left: 50%;
+  margin-left: -250px;
+  background-color:#48769e;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Courier New', monospace;
 }
 
 * {
@@ -17,35 +22,32 @@ code {
   user-select: none;
 }
 
-:root {
-  --text: #04395e;
-}
-
 .App {
-  margin: 30px 0 0 30px;
   width: 500px;
   border-radius: 10px;
   box-shadow: 0 3px 15px #0000001a;
   overflow: hidden;
+  background-color: white;
 }
 
 .top {
-  background: var(--text);
+  background: #bee1f9;
   color: #ffffff;
   padding: 10px;
   font-size: 28px;
   margin: 0;
-  font-weight: 500;
-  border-radius: 5px;
   margin-bottom: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 .task-input {
-  border-radius: 5px;
   margin-top: 10px;
-  background-color: var(--text);
+  background-color: #bee1f9;
   display: flex;
   padding: 5px;
+  outline: none;
 }
 
 .task-input * {
@@ -77,6 +79,8 @@ code {
   margin: 5px;
   border-radius: 5px;
   justify-content: space-between;
+  font-weight: 400;
+  background-color: white;
 }
 
 .task:hover {
@@ -87,21 +91,39 @@ code {
   font-size: 18px;
   font-weight: 500;
   margin: 0;
-  color: var(--text);
+  color: #104486;
 }
 
 .task-done {
-  background-color: #00000027;
+  background-color: #9acaf327;
 }
 .task-done  p {
-  color: #00000050;
+  color: #104486;
 }
 
 .action-btn {
   cursor: pointer;
-  margin-left: 10px;
+  outline: none !important;
+  font-size: 20px;
+  font-weight: 400;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.action-btn:active{
+  outline: none;
 }
 .action-btn:hover {
   background-color: #04395e3d;
   border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .App{
+    width: 300px;
+  } 
+  body {
+    margin-left: -150px;
+  }
 }
