@@ -3,7 +3,9 @@ import Button from "./Button"
 import '../../src/App.css'
 
 const Task = ({
-    task, deleteTask, doneTask
+    task, 
+    deleteTask, 
+    doneTask
 }) => {
  
     const className = 'task ' + (task.done ? 'task-done' : '')

@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Button = ({
-    task, doneTask, deleteTask
+    task, 
+    doneTask, 
+    deleteTask
 }) => {
     return (
         <div className = "action-btn">

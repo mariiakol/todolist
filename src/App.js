@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import Task from '../src/Components/Task'
 import './App.css'
+import Input from '../src/Components/Input'
 
 class App extends Component {
   constructor () {
@@ -33,6 +34,18 @@ class App extends Component {
     })
   }
 
+  addTask = (task) => {
+    this.setState(state => {
+      let {tasks} = state;
+      tasks.push({
+        id: tasks.length !==0 ? tasks.length : 0,
+        title: task,
+        done:false
+      })
+      return tasks;
+    })
+  }
+
 render() {
   const {tasks} = this.state; //реструктуризация ЕС6
   const activeTasks = tasks.filter(task => !task.done)
@@ -50,6 +63,7 @@ render() {
           </Task>
         ))
       }
+      <Input addTask = {this.addTask}></Input>
     </div>
   )
 }
